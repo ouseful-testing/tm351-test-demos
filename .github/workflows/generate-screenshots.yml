@@ -1,4 +1,4 @@
-name: test
+name: generate-gold-master-images
 
 on:
   workflow_dispatch:
