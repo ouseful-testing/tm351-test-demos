@@ -3,7 +3,7 @@ name: test
 on:
   workflow_dispatch:
 
-# This job installs dependencies, builds the book, and pushes it to `gh-pages`
+# This job installs dependencies and runs the tests
 jobs:
   notebook-tests:
     runs-on: ubuntu-latest
