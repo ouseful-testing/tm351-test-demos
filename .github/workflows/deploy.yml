@@ -13,9 +13,9 @@ jobs:
         ports:
         - 8888:8888
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3
 
     - name: Install playwright dependencies
       run: |
