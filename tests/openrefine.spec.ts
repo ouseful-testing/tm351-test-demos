@@ -13,8 +13,8 @@ const config: PlaywrightTestConfig = {
 export default config;
 
 test('test', async ({ page }) => {
-  // Go to http://localhost:8833/login?next=%2Ftree%3F
-  await page.goto('http://localhost:8833/login?next=%2Ftree%3F');
+  // Go to http://localhost:8888/login?next=%2Ftree%3F
+  await page.goto('http://localhost:8888/login?next=%2Ftree%3F');
   await expect(page).toHaveScreenshot('notebook-login-page.png');
   // Click text=Password or token: Log in >> input[name="password"]
   await page.locator('text=Password or token: Log in >> input[name="password"]').click();
@@ -22,7 +22,7 @@ test('test', async ({ page }) => {
   await page.locator('text=Password or token: Log in >> input[name="password"]').fill('letmein');
   // Press Enter
   await page.locator('text=Password or token: Log in >> input[name="password"]').press('Enter');
-  await expect(page).toHaveURL('http://localhost:8833/tree?');
+  await expect(page).toHaveURL('http://localhost:8888/tree?');
   await expect(page).toHaveScreenshot('notebook_homepage-test.png');
   // Click text=New Toggle Dropdown
   await page.locator('text=New Toggle Dropdown').click();
