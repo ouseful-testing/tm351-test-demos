@@ -8,9 +8,10 @@ jobs:
   notebook-tests:
     runs-on: ubuntu-latest
     services:
-      image: ouvocl/vce-tm351-monolith:22j-b2
-      ports:
-      - 8888:8888
+      jupyter-tm351:
+        image: ouvocl/vce-tm351-monolith:22j-b2
+        ports:
+        - 8888:8888
     steps:
     - uses: actions/checkout@v2
 
